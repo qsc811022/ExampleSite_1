@@ -1,134 +1,131 @@
-/* 全域設定 */
+/* ====== 🔹 全局設定 ====== */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #F3F4F6;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* 標題與連結 */
-h1, h2 {
-  color: #1E3A8A; /* 深藍色 */
-}
-h2 {
-  border-left: 5px solid #FACC15; /* 金色強調線 */
-  padding-left: 10px;
-}
-a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-/* 主要區塊 */
-header, section, footer {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* 頁首 */
-.header {
-  background-color: #1E3A8A;
+  font-family: "Noto Sans TC", sans-serif;
+  background: black;
   color: white;
   text-align: center;
-  padding: 60px 20px;
-  border-radius: 0 0 20px 20px;
-}
-.header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-.header p {
-  font-size: 1.2em;
 }
 
-/* 教師簡介 */
-.profile {
-  background-color: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* ====== 🔹 導覽列 (Navbar) ====== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-top: -30px;
-}
-.profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 30px;
-}
-.profile .bio {
-  flex: 1;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.8); /* 黑色半透明背景 */
+  z-index: 1000;
 }
 
-/* 課程 */
-.courses {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 40px;
-}
-.course-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-.course-item {
-  background-color: #E0E7FF;
-  flex: 1 1 calc(33.333% - 20px);
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.course-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.course-item h3 {
-  margin: 15px 0 10px;
-}
-.course-item p {
-  padding: 0 10px;
-}
-
-/* 研究成果 */
-.research {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 40px;
-  text-align: center;
-}
-.research img {
-  width: 100%;
+/* 🔹 Logo */
+.logo img {
+  width: 100px;
   height: auto;
-  margin-top: 20px;
 }
 
-/* 聯絡區 */
-.contact {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 40px;
+/* 🔹 選單 (桌面版) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
 }
 
-/* 頁尾 */
-footer {
-  text-align: center;
-  background-color: #1E3A8A;
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
   color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #facc15;
+}
+
+/* 🔹 漢堡選單按鈕 (手機版) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🔹 社群圖示 */
+.social-icons img {
+  width: 24px;
+  margin-left: 10px;
+}
+
+/* ====== 🔹 Hero 區塊 (修正背景圖問題) ====== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('Test.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔹 Hero 文字內容 */
+.hero-content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* 讓文字更清楚 */
   padding: 20px;
- 
+  border-radius: 10px;
+}
+
+/* 🔹 文字樣式 */
+.hero-title {
+  font-size: 4em;
+  font-weight: bold;
+  color: #facc15;
+  text-shadow: 4px 4px 15px rgba(255, 215, 0, 0.8);
+}
+
+.hero-subtitle {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #facc15;
+  text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7);
+}
+
+/* ====== 📱 RWD 行動版 (小於 768px) ====== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* 漢堡選單顯示 */
+  }
+
+  /* 🔹 預設隱藏選單 */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    z-index: 9999; /* 確保選單顯示在最上層 */
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+  }
+
+  /* 🔹 點擊展開選單 */
+  .nav-links.show {
+    display: flex;
+  }
 }
