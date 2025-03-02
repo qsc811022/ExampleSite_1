@@ -1,46 +1,134 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>黃俊物理 | 物理補習班</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script> <!-- 加入 JavaScript -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洪駿物理</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- 導航欄 -->
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/20x20?text=Logo" alt="洪駿物理 Logo" class="logo-icon"> 洪駿物理
+        </div>
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#curriculum">課程資訊</a></li>
+            <li><a href="#news">最新消息</a></li>
+            <li><a href="#contact">聯絡資訊</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="https://via.placeholder.com/30x30?text=FB" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="https://via.placeholder.com/30x30?text=IG" alt="Instagram"></a>
+        </div>
+    </nav>
 
-  <!-- 🔹 導覽列 (Navbar) -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="黃俊物理">
-    </div>
+    <!-- 首頁（帶標題和背景圖） -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>現象哲學</h1>
+            <p>Phenomen<br>Physics<br>Philosophy</p>
+        </div>
+    </section>
+    <div class="divider"></div>
 
-    <!-- 🔹 漢堡選單按鈕 (手機版顯示) -->
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <!-- 關於我們 -->
+    <section id="about" class="section">
+        <h1>關於我們</h1>
+        <p>物理是一門探索自然規律的科學，洪駿物理希望能帶領你進入這個奇妙的世界。</p>
+    </section>
+    <div class="divider"></div>
 
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home">首頁</a></li>
-      <li><a href="#about">關於我們</a></li>
-      <li><a href="#courses">最新課表</a></li>
-      <li><a href="#videos">影片專區</a></li>
-      <li><a href="#ranking">榜單見證區</a></li>
-      <li><a href="#contact">聯絡我們</a></li>
-    </ul>
+    <!-- 課程資訊 -->
+    <section id="curriculum" class="curriculum">
+        <h1>CURRICULUM<br>課程資訊</h1>
+        <div class="curriculum-items">
+            <div class="curriculum-item">
+                <img src="https://via.placeholder.com/350x200" alt="課程1">
+                <div class="text-box">
+                    <h2>高中物理課程</h2>
+                    <p>110學年度／物理核心課程 2小時課程 每週二下午 2 點至 4 點，針對高中生提供專業物理課程，幫助學生掌握核心知識並提升成績。</p>
+                    <button class="enroll-btn">立即報名</button>
+                </div>
+            </div>
+            <div class="curriculum-item">
+                <img src="https://via.placeholder.com/350x200" alt="課程2">
+                <div class="text-box">
+                    <h2>大學物理課程</h2>
+                    <p>110學年度／大學物理課程 2小時課程 每週四下午 2 點至 4 點，針對大學生提供專業物理課程，幫助學生掌握核心知識並提升成績。</p>
+                    <button class="enroll-btn">立即報名</button>
+                </div>
+            </div>
+            <div class="curriculum-item">
+                <img src="https://via.placeholder.com/350x200" alt="課程3">
+                <div class="text-box">
+                    <h2>初級物理課程</h2>
+                    <p>110學年度／初級物理課程 1小時課程 每週六上午 9 點至 10 點，針對初學者提供專業物理課程，幫助學生掌握核心知識並提升成績。</p>
+                    <button class="enroll-btn">立即報名</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
 
-    <div class="social-icons">
-      <a href="#"><img src="facebook.png" alt="FB"></a>
-      <a href="#"><img src="instagram.png" alt="IG"></a>
-    </div>
-  </nav>
+    <!-- 最新消息 -->
+    <section id="news" class="news">
+        <h1>NEWS<br>最新消息</h1>
+        <div class="news-items">
+            <div class="news-item">
+                <img src="https://via.placeholder.com/350x200" alt="消息1">
+                <p>110學年度／學生講座 每週二下午 2 點至 4 點，針對高中生提供專業物理課程，幫助學生掌握核心知識並提升成績。</p>
+            </div>
+            <div class="news-item">
+                <img src="https://via.placeholder.com/350x200" alt="消息2">
+                <p>110學年度／考試準備 每週四下午 2 點至 4 點，針對大學生提供專業物理課程，幫助學生掌握核心知識並提升成績。</p>
+            </div>
+            <div class="news-item">
+                <img src="https://via.placeholder.com/350x200" alt="消息3">
+                <p>110學年度／公開講座 每週六上午 9 點至 10 點，針對初學者提供專業物理課程，幫助學生掌握核心知識並提升成績。</p>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
 
-  <!-- 🔹 Hero 區塊 -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">黃俊物理</h1>
-      <p class="hero-subtitle">Phenomen<br>Physics<br>Philosophy</p>
-    </div>
-  </section>
+    <!-- 聯絡我們 -->
+    <section id="contact" class="contact">
+        <h1>CONTACT US<br>聯絡我們</h1>
+        <div class="contact-info">
+            <div class="contact-details">
+                <h2>聯絡資訊</h2>
+                <p><img src="https://via.placeholder.com/20x20?text=Phone" alt="電話"> 02-23888007</p>
+                <p><img src="https://via.placeholder.com/20x20?text=Email" alt="Email"> hjun.physics@gmail.com</p>
+                <p><img src="https://via.placeholder.com/20x20?text=FB" alt="Facebook"> 洪駿物理</p>
+                <p><img src="https://via.placeholder.com/20x20?text=IG" alt="Instagram"> @hjun.physics</p>
+                <p><img src="https://via.placeholder.com/20x20?text=Location" alt="地址"> 台北市中正區南陽街21-1號6樓</p>
+            </div>
+            <div class="qr-code">
+                <img src="https://via.placeholder.com/150x150?text=QR" alt="QR Code">
+            </div>
+            <div class="map">
+                <img src="https://via.placeholder.com/350x200?text=Map" alt="地圖">
+                <p>地址：台北市中正區南陽街21-1號6樓</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- 版權 -->
+    <footer>
+        <p>Copyright 2019</p>
+    </footer>
+
+    <!-- JavaScript for hamburger menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

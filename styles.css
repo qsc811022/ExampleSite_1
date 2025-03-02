@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft JhengHei', 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* 導航欄 */
+nav {
+  background-color: #333;
+  padding: 15px 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: #ffd700;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+nav .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+nav .social-icons a {
+  margin-left: 10px;
+  color: #007bff; /* 社群媒體圖標顯示為藍色連結 */
+}
+
+nav .social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 首頁（帶標題和背景圖） */
+.hero {
+  height: 667px;
+  background: url('https://via.placeholder.com/1200x667?text=Hero+Background') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+  background-color: #333; /* 確保背景黑色 */
+}
+
+.hero-content {
+  text-align: center;
+  color: #ffd700;
+  background: rgba(255, 255, 255, 0.9); /* 白色剪影效果 */
+  padding: 20px;
+  border-radius: 50%; /* 圓形剪影 */
+  width: 250px; /* 手機模式剪影寬度 */
+  height: 250px; /* 手機模式剪影高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 24px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #ffd700;
+}
+
+/* 新增的水平線 */
+.divider {
+  max-width: 1200px;
+  margin: 20px auto;
+  border-bottom: 2px solid #ffd700; /* 金色水平線，與圖片一致 */
+}
+
+/* 新增的假圖片 */
+.fake-image {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.fake-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 課程資訊 */
+.curriculum {
+  padding: 100px 20px 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.curriculum h1 {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.curriculum-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.curriculum-item {
+  width: 100%; /* 手機模式單欄 */
+  margin-bottom: 30px;
+  background-color: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.curriculum-item .text-box {
+  padding: 20px;
+  text-align: left;
+}
+
+.curriculum-item h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.curriculum-item p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.enroll-btn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.enroll-btn:hover {
+  background-color: #e6b800;
+}
+
+/* 最新消息 */
+.news {
+  background-color: #333;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news h1 {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.news-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  width: 100%; /* 手機模式單欄 */
+  margin-bottom: 30px;
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.news-item p {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* 聯絡我們 */
+.contact {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h1 {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-details, .qr-code, .map {
+  width: 100%; /* 手機模式單欄 */
+  margin-bottom: 30px;
+}
+
+.contact-details h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.qr-code img, .map img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.map p {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* 版權 */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* 響應式設計（手機模式） */
+@media screen and (max-width: 768px) {
+  nav {
+      padding: 10px 20px;
+      justify-content: space-between;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  nav ul {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      flex-direction: column;
+      padding: 10px 0; /* 縮短間距，與圖片一致 */
+  }
+
+  nav ul.active {
+      display: flex;
+  }
+
+  nav ul li {
+      margin: 5px 0; /* 縮小項目間距，與圖片一致 */
+      width: 100%;
+      text-align: left; /* 靠左對齊，與圖片一致 */
+      padding-left: 20px; /* 與漢堡菜單圖標對齊 */
+      border-bottom: 1px solid #ffffff; 
+  }
+
+  nav ul li a {
+      color: #ffd700; /* 手機模式菜單文字為金色 */
+      font-size: 16px; /* 調整文字大小，與圖片一致 */
+      text-decoration: none; /* 移除下底線 */
+  }
+
+  nav .social-icons {
+      position: static;
+      margin-top: 10px;
+  }
+
+  nav .social-icons a {
+      color: #007bff; /* 確保社群媒體圖標顯示為藍色連結 */
+  }
+
+  .hero {
+      height: 667px;
+      margin-top: 50px;
+  }
+
+  .hero-content {
+      width: 250px;
+      height: 250px;
+  }
+
+  .hero-content h1 {
+      font-size: 24px;
+  }
+
+  .hero-content p {
+      font-size: 16px;
+  }
+
+  .divider {
+      width: 90%; /* 手機模式縮窄 */
+  }
+
+  .fake-image img {
+      width: 100%;
+      height: auto;
+  }
+
+  .curriculum-items, .news-items, .contact-info {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .curriculum-item, .news-item, .contact-details, .qr-code, .map {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  .curriculum-item img, .news-item img {
+      height: 150px;
+  }
+}
+
+/* 桌面模式（大於 768px） */
+@media screen and (min-width: 769px) {
+  .hero {
+      height: 667px;
+  }
+
+  .hero-content {
+      width: 350px;
+      height: 350px;
+  }
+
+  .divider {
+      width: 1200px;
+  }
+
+  .curriculum-items, .news-items, .contact-info {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .curriculum-item, .news-item, .contact-details, .qr-code, .map {
+      width: 30%;
+  }
+
+  nav .menu-toggle {
+      display: none;
+  }
+
+  nav ul {
+      display: flex;
+  }
+
+  nav .social-icons {
+      position: static;
+      margin-left: 20px;
+  }
+}
